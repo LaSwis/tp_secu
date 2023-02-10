@@ -60,18 +60,18 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 
       // Vérification de la connexion
       if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
+        die("<p style='color:red;'> Connection failed: " . mysqli_connect_error());
       }
       if (!empty($_POST["new_username"]) && !empty($_POST["new_password"])) {
         $new_username = htmlspecialchars($_POST["new_username"]);
         $new_password = htmlspecialchars($_POST["new_password"]);
 
         if (!is_string($new_username) || strlen($new_username) < 5) {
-          echo "<p style='color:red;'> Invalid username: must be  at least 5 characters. </p>";
+          die("<p style='color:red;'> Invalid username: must be  at least 5 characters. </p>");
         }
 
         if (!is_string($new_password) || strlen($new_password) < 8) {
-          echo "<p style='color:red;'> Invalid password: must be at least 8 characters.";
+          die("<p style='color:red;'> Invalid password: must be at least 8 characters.");
         }
 
 
@@ -81,7 +81,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
       $number = preg_match('@[0-9]@', $new_password);
 
       if (!$uppercase || !$lowercase || !$number) {
-        echo "<p style='color:red;'>  Invalid password: must contain a mix of uppercase and lowercase letters, numbers, and special characters.";
+        die("<p style='color:red;'>  Invalid password: must contain a mix of uppercase and lowercase letters, numbers, and special characters.");
       }
 
       // Hash the password using password_hash function
@@ -99,7 +99,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
       $result = mysqli_stmt_get_result($stmt);
 
       if (mysqli_num_rows($result) > 0) {
-        echo "<p style='color:red;'>  Invalid Username: already taken";
+        die("<p style='color:red;'>  Invalid Username: already taken");
       }
       // Prepare the SQL statement
       $stmt = mysqli_prepare($conn, "INSERT INTO users (un, pw) VALUES (?, ?)");
@@ -117,6 +117,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
           exit();
       }
     }
+    mysqli_close($conn);
   }
 ?> 
 </body>
