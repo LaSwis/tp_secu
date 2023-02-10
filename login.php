@@ -68,7 +68,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
   
   // Vérification de la connexion
   if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
+    die("<p style='color:red;'> Connection failed: " . mysqli_connect_error());
   }
   
     // Récupération des données du formulaire
@@ -95,10 +95,10 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
         header("Location: welcome.php");
         exit();
       } else {
-        echo "Incorrect Password";
+        echo "<p style='color:red;'> Incorrect Password";
       }
     } else {
-      echo "Incorrect Username or  Password";
+      echo " <p style='color:red;'> Incorrect Username or  Password";
     }
 
     // Fermeture de la connexion
