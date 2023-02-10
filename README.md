@@ -49,5 +49,9 @@ Caractéristiques:
     -Validation des entrées pour empêcher les attaques par injection SQL
     -Cryptage des mots de passe à l'aide d'une fonction de hachage 
     -Gestion des erreurs pour les entrées non valides et les comptes en double
+  
+Remarques : 
+le nom d'utilisateur doit contenir minimum 5 caractères
+le mot de passe doit contenir minimum 8 caractères,une lettre majuscule , une lettre en minuscule et nombre.
 
 
