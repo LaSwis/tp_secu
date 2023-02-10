@@ -25,7 +25,7 @@ Caractéristiques:
 Comment utiliser :
     -Créez une base de données pour stocker les informations des utilisateurs.
     -Mettez à jour la configuration de la base de données dans Login.php (par exemple, le nom de la base de données, le nom d'utilisateur et le mot de passe).
-    -Placez le répertoire tp_secu sur votre serveur Web et accédez-y via votre navigateur.
+    -Placez le contenu du répertoire "tp_secu-main.zip" sur votre serveur Web et accédez-y via votre navigateur.
     -Accedez a "login.php"
     -Créez un compte a l'aide du bouton "Sign Up" 
     -Entrez votre nom d'utilisateur et votre mot de passe et cliquez sur le bouton "LogIn".
