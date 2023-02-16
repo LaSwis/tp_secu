@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>404</title>
+    <title>welcome</title>
   </head>
   <body>
     <img src="meme.png" alt="Logo">
