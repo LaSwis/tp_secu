@@ -1,3 +1,15 @@
+Prérequis :
+
+Téléchargez et installez XAMPP à partir du site web officiel : https://www.apachefriends.org/download.html
+
+Installation :
+    -Téléchargez le code PHP que vous souhaitez exécuter.
+    -Placez les fichiers du répertoire tp_secu dans le répertoire htdocs de votre installation XAMPP.
+    -Assurez-vous que XAMPP est en cours d'exécution en lançant l'application XAMPP Control Panel et en vérifiant que les serveurs Apache et MySQL sont actifs.
+    -Ouvrez votre navigateur web et accédez à l'adresse http://localhost/login.php
+
+
+
 
 
 login.php :
@@ -23,8 +35,7 @@ Caractéristiques:
     -Gestion des erreurs pour les tentatives de connexion incorrectes
 
 Comment utiliser :
-    -Créez une base de données pour stocker les informations des utilisateurs.
-    -Mettez à jour la configuration de la base de données dans Login.php (par exemple, le nom de la base de données, le nom d'utilisateur et le mot de passe).
+    -utiliser le ficher "users_db" pour importer la base de données.
     -Placez le contenu du répertoire "tp_secu-main.zip" sur votre serveur Web et accédez-y via votre navigateur.
     -Accedez a "login.php"
     -Créez un compte a l'aide du bouton "Sign Up" 
